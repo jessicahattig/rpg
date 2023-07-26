@@ -12,4 +12,12 @@ test('Character should be create with correct attributets', () => {
       expect(warrior.experience).toBe(0);
       expect(warrior.inventory).toEqual([]);
   });
+
+test('Character should level up correctly', () => {
+  const wizard = new Character("Tom", "wizard", 20, 10, {});
+    expect(wizard.level).toBe(1);
+    wizard.levelUp();
+    expect(wizard.level).toBe(2);
+  });
 });
+
